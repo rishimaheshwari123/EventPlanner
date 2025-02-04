@@ -1,4 +1,5 @@
 "use client";
+
 import AddGallery from "@/components/admin/pages/AddGallery";
 import React, { useEffect, useState } from "react";
 

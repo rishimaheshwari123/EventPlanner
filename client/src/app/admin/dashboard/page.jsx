@@ -1,5 +1,5 @@
 "use client";
-import Dashboard from "@/components/Admin/pages/Dashboard";
+import Dashboard from "@/components/admin/pages/Dashboard";
 import React, { useEffect, useState } from "react";
 
 const page = () => {
