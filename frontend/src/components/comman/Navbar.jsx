@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { navlink } from "@/data/navlink";
 import Image from "next/image";
-import logo from "@/assets/logo1.png";
+import logo from "@/assets/logo2.png";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -12,7 +12,7 @@ const Navbar = () => {
     <nav className="bg-[#FFCA24] border-b-2  text-black fixed w-full z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 py-3">
         <div className="flex justify-between h-16 items-center">
-          <Image src={logo} alt="not found" height={80} />
+          <Image src={logo} alt="not found" className="w-32 h-20" height={80} />
 
           <div className="hidden md:flex space-x-8 text-white">
             {navlink.map((nav) => (

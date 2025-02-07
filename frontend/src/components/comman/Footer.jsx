@@ -7,7 +7,7 @@ import {
   FaMapMarkerAlt,
   FaWhatsapp,
 } from "react-icons/fa";
-import logo from "@/assets/logo1.png";
+import logo from "@/assets/logo2.png";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 const Footer = () => {
