@@ -77,7 +77,7 @@ const Contact = () => {
       <div className=" grid gap-4 main lg:grid lg:grid-cols-2 my-36 items-center">
         <div className="first flex flex-col gap-8">
           <div className="flex items-center gap-4">
-            <span className="px-4 py-3 bg-yellow-500 rounded-md text-xl">
+            <span className="px-4 py-3 bg-[#1d3432] text-white rounded-md text-xl">
               <FaLocationDot />
             </span>
             <span>
@@ -87,13 +87,13 @@ const Contact = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <span className="px-4 py-3 bg-yellow-500 rounded-md  text-xl">
+            <span className="px-4 py-3 bg-[#1d3432] text-white rounded-md  text-xl">
               <MdEmail />
             </span>
             <span>adityaeventplanner56@gmail.com</span>
           </div>
           <div className="flex items-center gap-4">
-            <span className="px-4 py-3 bg-yellow-500 rounded-md  text-xl">
+            <span className="px-4 py-3 bg-[#1d3432] text-white rounded-md  text-xl">
               <FaPhone />
             </span>
             <span>+91 7648855478 || +91 9425727907</span>
@@ -135,7 +135,7 @@ const Contact = () => {
           ></textarea>
           <button
             type="submit"
-            className=" px-5 bg-yellow-500 text-white py-2 rounded-md text-center text-xl  mt-5 contact-btn
+            className=" px-5 bg-[#1d3432] text-white py-2 rounded-md text-center text-xl  mt-5 contact-btn
           "
           >
             Send Message!

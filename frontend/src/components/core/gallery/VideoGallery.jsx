@@ -27,9 +27,9 @@ const VideoGallery = () => {
   };
 
   return (
-    <div className="bg-gray-100">
+    <div className="bg-[#1d3432]">
       <div className="max-w-7xl mx-auto py-12 px-4">
-        <h2 className="text-3xl font-bold text-gray-800 text-center mb-8">
+        <h2 className="text-3xl font-bold text-white text-center mb-8">
           Our Video Gallery
         </h2>
 

@@ -7,7 +7,7 @@ import {
   FaMapMarkerAlt,
   FaWhatsapp,
 } from "react-icons/fa";
-import logo from "@/assets/logo2.png";
+import logo from "@/assets/logo.jpg";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 const Footer = () => {
@@ -23,7 +23,7 @@ const Footer = () => {
   }
 
   return (
-    <footer className="bg-black text-white py-12">
+    <footer className="bg-[#1d3432] text-white py-12">
       <div className="max-w-6xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
           <Image src={logo} alt="not found" height={80} />

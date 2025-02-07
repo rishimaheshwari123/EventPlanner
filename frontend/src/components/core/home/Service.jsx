@@ -22,7 +22,7 @@ const Services = () => {
             key={service.id}
             className="flex flex-col items-center justify-center p-5 rounded-xl shadow-lg bg-white/70 backdrop-blur-md transition transform hover:-translate-y-2 hover:shadow-2xl"
           >
-            <div className="text-4xl text-blue-600">{service.icon}</div>
+            <div className="text-4xl text-red-600">{service.icon}</div>
             <p className="mt-3 text-center text-gray-700 font-medium">
               {service.title}
             </p>

@@ -23,7 +23,7 @@ const BackendGallery = () => {
   const uniqueTypes = [...new Set(gallery.map((currElem) => currElem.type))];
 
   const filteredImages = selectedType
-    ? gallery.filter((currElem) => currElem.type === selectedType)
+    ? gallery?.filter((currElem) => currElem.type === selectedType)
     : gallery;
 
   return (
@@ -34,7 +34,7 @@ const BackendGallery = () => {
       <div className="max-w-7xl mx-auto p-6">
         {/* Type Buttons */}
         <div className="flex flex-wrap justify-center gap-4 mb-6">
-          {uniqueTypes.map((type) => (
+          {uniqueTypes?.map((type) => (
             <button
               key={type}
               onClick={() => handleTypeClick(type)}
@@ -50,7 +50,7 @@ const BackendGallery = () => {
 
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {filteredImages.map((currElem) =>
+          {filteredImages?.map((currElem) =>
             currElem.images.map((item) => (
               <div
                 key={item.public_id}
@@ -58,7 +58,7 @@ const BackendGallery = () => {
               >
                 {/* Image */}
                 <img
-                  src={item.url}
+                  src={item?.url}
                   alt="Gallery Image"
                   className="w-full h-full object-cover rounded-lg transition-all duration-300 group-hover:scale-105"
                 />
@@ -66,7 +66,7 @@ const BackendGallery = () => {
                 {/* Title shown in the center on hover */}
                 <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-all duration-300">
                   <div className="text-white text-xl font-semibold px-6 py-2 rounded-md">
-                    {currElem.title}
+                    {currElem?.title}
                   </div>
                 </div>
               </div>

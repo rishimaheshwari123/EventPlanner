@@ -4,15 +4,17 @@ import Link from "next/link";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { navlink } from "@/data/navlink";
 import Image from "next/image";
-import logo from "@/assets/logo2.png";
+import logo from "@/assets/logo.jpg";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-[#FFCA24] border-b-2  text-black fixed w-full z-50">
+    <nav className="bg-[#1d3432] border-b-2  text-black fixed w-full z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 py-3">
         <div className="flex justify-between h-16 items-center">
-          <Image src={logo} alt="not found" className="w-32 h-20" height={80} />
+          <div className="w-[83px] h-20">
+            <Image src={logo} alt="not found" className="object-cover" />
+          </div>
 
           <div className="hidden md:flex space-x-8 text-white">
             {navlink.map((nav) => (

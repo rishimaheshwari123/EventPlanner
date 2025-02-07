@@ -3,8 +3,8 @@ import s1 from "@/assets/s1.png";
 import s2 from "@/assets/s2.png";
 const LatestShot = () => {
   return (
-    <section className="latest-shot bg-gradient-to-r from-pink-50 to-white py-12">
-      <h2 className="text-3xl font-bold text-gray-800 text-center mb-4">
+    <section className="latest-shot bg-gradient-to-r bg-[#1d3432] py-12">
+      <h2 className="text-3xl font-bold text-white text-center mb-4">
         Latest Shoots
       </h2>
       <hr className="w-16 text-center mx-auto border-yellow-500 mb-4" />
@@ -20,10 +20,10 @@ const LatestShot = () => {
             />
           </div>
           <div className="md:w-1/2 mt-6  text-center md:text-left px-4">
-            <h2 className="text-3xl md:text-4xl font-semibold text-pink-700 mb-3 md:mb-4">
+            <h2 className="text-3xl md:text-4xl font-semibold text-red-500 mb-3 md:mb-4">
               The Big Day
             </h2>
-            <p className="text-gray-600 text-base md:text-lg leading-relaxed">
+            <p className="text-white text-base md:text-2xl leading-relaxed">
               A celebration of love, joy, and commitment. This wedding was a
               moment to remember, a union of two souls bound forever.
             </p>
@@ -32,10 +32,10 @@ const LatestShot = () => {
 
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2  text-center md:text-left px-4">
-            <h2 className="text-3xl md:text-4xl font-semibold text-pink-700 mb-3 md:mb-4">
+            <h2 className="text-3xl md:text-4xl font-semibold text-red-500 mb-3 md:mb-4">
               A Promise for a Lifetime
             </h2>
-            <p className="text-gray-600 text-base md:text-lg leading-relaxed">
+            <p className="text-white  text-base md:text-2xl leading-relaxed">
               The vows exchanged, promises made, and a future full of dreams.
               This special moment was captured forever.
             </p>

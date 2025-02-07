@@ -36,7 +36,7 @@ const Gallery = () => {
         </p>
         <hr className="w-16 text-center mx-auto border-yellow-500 mb-4" />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {galleryImages.map((image) => (
+          {galleryImages?.map((image) => (
             <div
               key={image.id}
               className="relative group overflow-hidden shadow-lg"

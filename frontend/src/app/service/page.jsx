@@ -51,8 +51,8 @@ const Services = () => {
                   className="w-full h-[70vh] object-cover transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 cursor-pointer transition-opacity duration-300">
-                  <div className="bg-[#f0d0e899]/60 w-[90%] h-[90%] flex items-center justify-center px-8 py-4  text-center">
-                    <h3 className="text-2xl font-semibold text-black">
+                  <div className="bg-[#1d3432]/95 w-[90%] h-[90%] flex items-center justify-center px-8 py-4  text-center">
+                    <h3 className="text-2xl font-semibold text-white">
                       {service.title}
                     </h3>
                   </div>

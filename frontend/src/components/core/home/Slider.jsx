@@ -109,19 +109,19 @@ const Slider = () => {
                   textVisible ? "opacity-100" : "opacity-0"
                 }`}
               >
-                <div className="bg-[#eae369] bg-opacity-60 text-white p-5 sm:p-6 md:p-8 lg:p-12 max-w-full md:max-w-lg ml-auto">
-                  <p className="text-[#000] text-xs sm:text-sm md:text-base font-bold mb-2">
+                <div className="bg-[#1d3432] bg-opacity-60 text-white p-5 sm:p-6 md:p-8 lg:p-12 max-w-full md:max-w-lg ml-auto">
+                  <p className="text-white text-xs sm:text-sm md:text-base font-bold mb-2">
                     {item.title}
                   </p>
-                  <h2 className="text-black text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold mb-4">
+                  <h2 className="text-white text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold mb-4">
                     {item.headline}
                   </h2>
-                  <p className="text-black text-sm sm:text-base md:text-lg mb-6">
+                  <p className="text-white text-sm sm:text-base md:text-lg mb-6">
                     {item.description}
                   </p>
                   {item.buttonText && (
                     <Link href={item.buttonLink || "#"}>
-                      <button className="bg-[#efcc41] text-[#62000f] px-4 py-2 sm:px-6 sm:py-3 rounded-full font-semibold hover:bg-[#ffc107] transition duration-300">
+                      <button className="bg-[#fff] text-[#62000f] px-4 py-2 sm:px-6 sm:py-3 rounded-full font-semibold hover:bg-[#ffc107] transition duration-300">
                         {item.buttonText}
                       </button>
                     </Link>

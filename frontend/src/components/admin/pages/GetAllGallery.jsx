@@ -40,22 +40,21 @@ const GetAllGallery = () => {
             </tr>
           </thead>
           <tbody>
-            {/* Display all images from the gallery */}
-            {gallery.map((currElem) =>
-              currElem.images.map((item) => (
+            {gallery?.map((currElem) =>
+              currElem?.images.map((item) => (
                 <tr key={item.public_id} className="border-b">
                   <td className="px-4 py-2">
                     <img
-                      src={item.url}
+                      src={item?.url}
                       alt="Gallery Image"
                       className="w-16 h-16 object-cover rounded-lg"
                     />
                   </td>
-                  <td className="px-4 py-2">{currElem.type}</td>
-                  <td className="px-4 py-2">{currElem.title}</td>
+                  <td className="px-4 py-2">{currElem?.type}</td>
+                  <td className="px-4 py-2">{currElem?.title}</td>
                   <td className="px-4 py-2">
                     <button
-                      onClick={() => deleteImage(currElem._id)}
+                      onClick={() => deleteImage(currElem?._id)}
                       className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600"
                     >
                       Delete
