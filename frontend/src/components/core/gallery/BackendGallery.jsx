@@ -47,9 +47,7 @@ const BackendGallery = () => {
 
         <br />
         <br />
-
-        {/* Gallery Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredImages?.map((currElem) =>
             currElem.images.map((item) => (
               <div
@@ -60,14 +58,16 @@ const BackendGallery = () => {
                 <img
                   src={item?.url}
                   alt="Gallery Image"
-                  className="w-full h-full object-cover rounded-lg transition-all duration-300 group-hover:scale-105"
+                  className="w-full h-full aspect-square object-cover rounded-lg transition-all duration-300 group-hover:scale-105"
                 />
 
-                {/* Title shown in the center on hover */}
-                <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-all duration-300">
                   <div className="text-white text-xl font-semibold px-6 py-2 rounded-md">
                     {currElem?.title}
                   </div>
+                  <button className="border-2 mt-1 rounded-lg border-white text-white px-5 py-2 transition duration-300 hover:bg-white hover:text-gray-800">
+                    <a href="tel:7648855478">Book Now</a>
+                  </button>
                 </div>
               </div>
             ))

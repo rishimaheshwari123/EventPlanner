@@ -13,14 +13,14 @@ const GalleryPage = () => {
           src={gallery}
           alt="Not Found"
           objectFit="cover"
-          className="h-[80vh] object-cover opacity-85"
+          className="h-[70vh] w-screen object-cover opacity-85"
         />
       </div>
 
       <div className="min-h-[75vh]"></div>
-      <Gallery />
-      <VideoGallery />
       <BackendGallery />
+      <VideoGallery />
+      <Gallery />
     </div>
   );
 };

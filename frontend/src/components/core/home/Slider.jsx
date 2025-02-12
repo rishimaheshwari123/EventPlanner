@@ -32,7 +32,7 @@ const Slider = () => {
   const slides = [
     {
       id: 1,
-      image: slide1,
+      image: slide3,
       title: "Luxury Wedding Planning",
       headline: "Crafting Your Dream Wedding",
       description:
@@ -52,7 +52,7 @@ const Slider = () => {
     },
     {
       id: 3,
-      image: slide3,
+      image: slide1,
       title: "Destination Weddings",
       headline: "Say 'I Do' in Style",
       description:
@@ -88,7 +88,7 @@ const Slider = () => {
           1024: { slidesPerView: 1, spaceBetween: 0 },
         }}
         onSlideChange={handleSlideChange}
-        className="relative z-10 h-[80vh] sm:h-[60vh] md:h-[80vh] lg:h-[90vh]"
+        className="relative z-10 h-[90vh] sm:h-[60vh] md:h-[80vh] lg:h-[90vh]"
       >
         {slides.map((item) => (
           <SwiperSlide
