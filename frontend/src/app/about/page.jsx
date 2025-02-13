@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import about2 from "@/assets/slider2.jpg";
+import about2 from "@/assets/slider3.jpg";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import about from "@/assets/about.png";
 const AboutPage = () => {
@@ -25,17 +25,14 @@ const AboutPage = () => {
               Let us make your event memorable!
             </p>
             <p className="text-gray-700 mb-4">
-              Parties | Couple Surprises | Baby Shower | Wedding | Corporate |
-              Farewell
+            Weddings I Destination Weddings I Corporate Events I Birthdays & Anniversaries I Bridal & Baby Showers I Concerts & Music Festivals I Religious Events I Parades & Carnivals I
             </p>
             <p className="text-gray-700 mb-6">
-              From planning weddings to organizing unforgettable events, we are
-              here to take care of every detail. Trust us to bring your vision
-              to life.
+            From planning weddings to organizing unforgettable events, we are here to take care of every detail. Trust us to bring your vision to life
             </p>
             <div className="text-gray-800 flex items-center">
               <FaMapMarkerAlt className="mr-2 text-yellow-600" />
-              <span>Office Address: Platinum Plaza, New Market, Bhopal</span>
+              <span>Office Address: G81 Shewta Complex, E-8 Arera Colony, Trilanga, Bhopal, MadhyaPradesh 462039</span>
             </div>
           </div>
 

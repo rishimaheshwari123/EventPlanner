@@ -1,6 +1,6 @@
 import Gallery from "@/components/core/gallery/Gallery";
 import React from "react";
-import gallery from "@/assets/slider1.jpg";
+import gallery from "@/assets/slider3.jpg";
 import Image from "next/image";
 import VideoGallery from "@/components/core/gallery/VideoGallery";
 import BackendGallery from "@/components/core/gallery/BackendGallery";
