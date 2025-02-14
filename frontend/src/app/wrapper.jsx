@@ -9,6 +9,7 @@ import { usePathname } from "next/navigation";
 import Navbar from "@/components/comman/Navbar";
 import Footer from "@/components/comman/Footer";
 import { useEffect, useState } from "react";
+import Whatsapp from "@/components/core/home/Whatsapp";
 
 const Wrapper = ({ children }) => {
   const pathname = usePathname();
@@ -26,6 +27,7 @@ const Wrapper = ({ children }) => {
   return (
     <Provider store={store}>
       {isAdminRoute ? null : <Navbar />}
+      {isAdminRoute ? null : <Whatsapp />}
 
       {children}
       <ToastContainer />

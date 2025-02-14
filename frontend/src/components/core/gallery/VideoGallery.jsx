@@ -17,9 +17,12 @@ const VideoGallery = () => {
           Our Video Gallery
         </h2>
 
-        <div className="grid lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {videoData.slice(0, 2).map((video) => (
-            <div key={video.id} className="rounded-lg overflow-hidden shadow-lg">
+            <div
+              key={video.id}
+              className="rounded-lg overflow-hidden shadow-lg"
+            >
               <video
                 src={video.videoSrc}
                 autoPlay
@@ -32,9 +35,13 @@ const VideoGallery = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 mt-8">
+        {/* Ye sirf lg screens ke liye hai */}
+        <div className="hidden lg:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 mt-8">
           {videoData.slice(2).map((video) => (
-            <div key={video.id} className="rounded-lg overflow-hidden shadow-lg">
+            <div
+              key={video.id}
+              className="rounded-lg overflow-hidden shadow-lg"
+            >
               <video
                 src={video.videoSrc}
                 autoPlay
