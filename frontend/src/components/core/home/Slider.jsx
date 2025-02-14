@@ -97,7 +97,7 @@ const Slider = () => {
                 alt={item.title}
                 width={1920}
                 height={1080}
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                className="w-full h-full object-cover animated-zoom transition-transform duration-300 group-hover:scale-105"
                 priority
               />
               <div className="absolute inset-0 bg-black bg-opacity-65"></div>
