@@ -9,13 +9,7 @@ import { MdLogout } from "react-icons/md";
 import { FaHome } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { setToken, setUser } from "@/redux/authSlice";
-import {
-  FcBullish,
-  FcPlus,
-  FcPieChart,
-  FcMultipleCameras,
-} from "react-icons/fc";
-import { PiStudentFill } from "react-icons/pi";
+import { FcBullish, FcMultipleCameras } from "react-icons/fc";
 
 const Sidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState(
@@ -34,11 +28,10 @@ const Sidebar = () => {
     router.push("/login");
   };
 
-  // Function to toggle sidebar collapse
   const handleToggle = () => {
     const collapsed = !isCollapsed;
     setIsCollapsed(collapsed);
-    localStorage.setItem("sidebarCollapsed", collapsed.toString());
+    localStorage.setItem("sidebarCollapsed", collapsed?.toString());
   };
 
   // Effect to close sidebar when clicking outside
