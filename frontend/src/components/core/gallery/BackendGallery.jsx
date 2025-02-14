@@ -26,6 +26,10 @@ const BackendGallery = () => {
     ? gallery?.filter((currElem) => currElem.type === selectedType)
     : gallery;
 
+
+    function removeNumbersFromString(str) {
+      return str.replace(/\d+/g, ''); // Sabhi numeric values ko hata dega
+  }
   return (
     <div className="bg-white">
       <br />
@@ -40,7 +44,7 @@ const BackendGallery = () => {
               onClick={() => handleTypeClick(type)}
               className="bg-yellow-500 text-white px-4 py-2 text-xl rounded-lg hover:bg-gray-700"
             >
-              {type}
+              {removeNumbersFromString(type)}
             </button>
           ))}
         </div>

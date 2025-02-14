@@ -1,13 +1,15 @@
 import Link from "next/link";
 import { FaHome, FaCamera, FaBook } from "react-icons/fa";
 import { GiDiamondRing, GiFlowerEmblem, GiLoveLetter } from "react-icons/gi";
+import { MdEmojiEvents } from "react-icons/md";
 
 const services = [
   { id: 1, title: "Wedding Decoration", icon: <GiFlowerEmblem /> },
   { id: 2, title: "Home Decoration", icon: <FaHome /> },
   { id: 3, title: "Professional Photoshoot", icon: <FaCamera /> },
-  { id: 4, title: "Bhagwat & Ram Katha", icon: <FaBook /> },
+  { id: 4, title: "Religious ", icon: <FaBook /> },
   { id: 5, title: "Pre Wedding Photoshoot", icon: <GiDiamondRing /> },
+  { id: 5, title: "Corporate And Concerts", icon: <MdEmojiEvents /> },
 ];
 
 const Services = () => {
