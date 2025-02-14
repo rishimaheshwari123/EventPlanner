@@ -40,26 +40,26 @@ const Slider = () => {
       buttonText: "Plan Your Wedding",
       buttonLink: "/contact",
     },
-    // {
-    //   id: 2,
-    //   image: slide2,
-    //   title: "Exclusive Event Management",
-    //   headline: "Creating Moments That Last",
-    //   description:
-    //     "Whether it's a corporate event or a private celebration, our team ensures every detail is taken care of with perfection.",
-    //   buttonText: "Explore Events",
-    //   buttonLink: "/contact",
-    // },
-    // {
-    //   id: 3,
-    //   image: slide1,
-    //   title: "Destination Weddings",
-    //   headline: "Say 'I Do' in Style",
-    //   description:
-    //     "Plan a breathtaking destination wedding at the most stunning locations, tailored to your dreams and desires.",
-    //   buttonText: "Get Started",
-    //   buttonLink: "/contact",
-    // },
+    {
+      id: 2,
+      image: slide2,
+      title: "Exclusive Event Management",
+      headline: "Creating Moments That Last",
+      description:
+        "Whether it's a corporate event or a private celebration, our team ensures every detail is taken care of with perfection.",
+      buttonText: "Explore Events",
+      buttonLink: "/contact",
+    },
+    {
+      id: 3,
+      image: slide1,
+      title: "Destination Weddings",
+      headline: "Say 'I Do' in Style",
+      description:
+        "Plan a breathtaking destination wedding at the most stunning locations, tailored to your dreams and desires.",
+      buttonText: "Get Started",
+      buttonLink: "/contact",
+    },
   ];
 
   const handleSlideChange = () => {

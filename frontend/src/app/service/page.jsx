@@ -12,7 +12,7 @@ import service9 from "@/assets/service9.png";
 import service10 from "@/assets/service10.jpg";
 import service11 from "@/assets/service11.jpg";
 import service12 from "@/assets/service12.jpg";
-import service from "@/assets/slider3.jpg";
+import service from "@/assets/slider2.jpg";
 
 const services = [
   { id: 1, title: "Home Decoration", image: service1 },
@@ -37,7 +37,7 @@ const Services = () => {
           src={service}
           alt="Not Found"
           objectFit="cover"
-          className="h-[70vh] object-cover opacity-85"
+          className="h-[70vh] w-screen object-cover opacity-85"
         />
       </div>
 

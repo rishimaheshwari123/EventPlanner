@@ -21,7 +21,7 @@ const Navbar = () => {
               <Link
                 key={nav.id}
                 href={nav.link}
-                className="relative text-[18px] uppercase transition-all duration-300 hover:text-white after:absolute after:left-0 after:bottom-[-2px] after:w-0 after:h-[2px] after:bg-white hover:after:w-full after:transition-all after:duration-300"
+                className="relative text-[16px] uppercase transition-all duration-300 hover:text-white after:absolute after:left-0 after:bottom-[-2px] after:w-0 after:h-[2px] after:bg-white hover:after:w-full after:transition-all after:duration-300"
               >
                 {nav.name}
               </Link>
@@ -29,7 +29,10 @@ const Navbar = () => {
           </div>
 
           <div className="md:hidden">
-            <button onClick={() => setMenuOpen(!menuOpen)}>
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="text-white"
+            >
               {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
             </button>
           </div>
@@ -37,7 +40,7 @@ const Navbar = () => {
       </div>
 
       {menuOpen && (
-        <div className="absolute top-16 left-0 w-full bg-white shadow-md border-t border-[#d9c7ad] z-50">
+        <div className="absolute top-20 left-0 w-full bg-[#1d3432]  text-white shadow-md border-t border-[#d9c7ad] z-50">
           {navlink.map((nav) => (
             <Link
               key={nav.id}
