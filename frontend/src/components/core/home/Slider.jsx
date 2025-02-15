@@ -21,6 +21,8 @@ import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import slide1 from "@/assets/slider1.jpg";
 import slide2 from "@/assets/slider2.jpg";
 import slide3 from "@/assets/slider3.jpg";
+import home from "@/assets/home.png";
+import home2 from "@/assets/home2.jpg";
 
 const Slider = () => {
   const [textVisible, setTextVisible] = useState(false);
@@ -33,7 +35,7 @@ const Slider = () => {
   const slides = [
     {
       id: 1,
-      image: slide3,
+      image: home,
       title: "Luxury Wedding Planning",
       headline: "Crafting Your Dream Wedding",
       description:
@@ -41,26 +43,26 @@ const Slider = () => {
       buttonText: "Contact Us",
       buttonLink: "/contact",
     },
-    {
-      id: 2,
-      image: slide2,
-      title: "Exclusive Event Management",
-      headline: "Creating Moments That Last",
-      description:
-        "Whether it's a corporate event or a private celebration, our team ensures every detail is taken care of with perfection.",
-      buttonText: "Contact Us",
-      buttonLink: "/contact",
-    },
-    {
-      id: 3,
-      image: slide1,
-      title: "Destination Weddings",
-      headline: "Say 'I Do' in Style",
-      description:
-        "Plan a breathtaking destination wedding at the most stunning locations, tailored to your dreams and desires.",
-      buttonText: "Contact Us",
-      buttonLink: "/contact",
-    },
+    // {
+    //   id: 2,
+    //   image: slide2,
+    //   title: "Exclusive Event Management",
+    //   headline: "Creating Moments That Last",
+    //   description:
+    //     "Whether it's a corporate event or a private celebration, our team ensures every detail is taken care of with perfection.",
+    //   buttonText: "Contact Us",
+    //   buttonLink: "/contact",
+    // },
+    // {
+    //   id: 3,
+    //   image: slide1,
+    //   title: "Destination Weddings",
+    //   headline: "Say 'I Do' in Style",
+    //   description:
+    //     "Plan a breathtaking destination wedding at the most stunning locations, tailored to your dreams and desires.",
+    //   buttonText: "Contact Us",
+    //   buttonLink: "/contact",
+    // },
   ];
 
   const handleSlideChange = () => {
@@ -84,25 +86,36 @@ const Slider = () => {
         fadeEffect={{ crossFade: true }}
         spaceBetween={0}
         onSlideChange={handleSlideChange}
-        className="relative z-10 h-[70vh] sm:h-[60vh] md:h-[100vh] lg:h-[100vh]"
+        className="relative z-10 h-[90vh] lg:h-[100vh]"
       >
-        {slides.map((item) => (
+       
           <SwiperSlide
-            key={item.id}
-            className="relative h-[80vh] sm:h-[60vh] md:h-[80vh] lg:h-[90vh] group"
+         
+            className="relative mt-10 h-[90vh]  lg:h-[80vh] group"
           >
             <div className="relative w-full h-full overflow-hidden">
               <Image
-                src={item.image}
-                alt={item.title}
+                src={home}
+                alt="Slider "
                 width={1920}
                 height={1080}
-                className="w-full h-full object-cover animated-zoom transition-transform duration-300 group-hover:scale-105"
+                className="w-full hidden lg:block md:block  h-full object-cover animated- zoom transition-transform duration-300 "
                 priority
               />
-              <div className="absolute inset-0 bg-black bg-opacity-65"></div>
+              <Image
+                src={home2}
+                alt="Slider "
+                width={1920}
+                height={1080}
+                className="w-full lg:hidden h-full object-cover animated -zoom transition-transform duration-300 "
+                priority
+              />
+          
 
-              <div
+
+              {/* <div className="absolute inset-0 bg-black bg-opacity-65"></div> */}
+
+              {/* <div
                 className={`absolute left-10 md:left-16 top-1/4 p-6 z-10 flex flex-col justify-center transition-opacity duration-1000 max-w-lg ${
                   textVisible ? "opacity-100" : "opacity-0"
                 }`}
@@ -116,7 +129,7 @@ const Slider = () => {
                 <p className="text-white text-sm sm:text-base md:text-lg mb-6">
                   {item.description}
                 </p>
-                {/* Social Media Icons */}
+         
                 <div className="flex gap-4 ">
                   <Link href="#">
                     <FaFacebookF className="text-white text-lg hover:text-[#4267B2] transition duration-300 cursor-pointer" />
@@ -135,10 +148,10 @@ const Slider = () => {
                     </button>
                   </Link>
                 )}
-              </div>
+              </div> */}
             </div>
           </SwiperSlide>
-        ))}
+    
       </Swiper>
     </div>
   );

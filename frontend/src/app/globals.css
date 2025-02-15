@@ -27,5 +27,5 @@ body {
 }
 
 .animated-zoom {
-  animation: zoomEffect 8s infinite ease-in-out;
+  animation: zoomEffect 10s infinite ease-in-out;
 }
