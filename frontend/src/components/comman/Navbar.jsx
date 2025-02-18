@@ -8,7 +8,7 @@ import logo from "@/assets/log.jpg";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [hoveredMenu, setHoveredMenu] = useState(null);
   const [mobileDropdown, setMobileDropdown] = useState(null);
 
   return (
@@ -27,8 +27,8 @@ const Navbar = () => {
                 <div
                   key={nav.id}
                   className="relative group"
-                  onMouseEnter={() => setDropdownOpen(true)}
-                  onMouseLeave={() => setDropdownOpen(false)}
+                  onMouseEnter={() => setHoveredMenu(nav.id)}
+                  onMouseLeave={() => setHoveredMenu(null)}
                 >
                   <Link
                     href={nav.link}
@@ -38,13 +38,13 @@ const Navbar = () => {
                   </Link>
 
                   {/* Dropdown Menu */}
-                  {dropdownOpen && (
-                    <div className="absolute -left-14 top-5  bg-opacity-95 pt-7 w-64 bg-[#1d3432] text-white shadow-lg rounded-lg">
+                  {hoveredMenu === nav.id && (
+                    <div className="absolute left-0 top-full bg-opacity-95 pt-2 w-64 bg-[#1d3432] text-white shadow-lg rounded-lg">
                       {nav.submenu.map((sub) => (
                         <Link
                           key={sub.id}
                           href={sub.link}
-                          className="block px-4 py-3 hover:bg-[#d2e46b] hover:text-black  transition"
+                          className="block px-4 py-3 hover:bg-[#d2e46b] hover:text-black transition"
                         >
                           {sub.name}
                         </Link>
@@ -94,7 +94,9 @@ const Navbar = () => {
                 {nav.submenu && (
                   <button
                     onClick={() =>
-                      setMobileDropdown(mobileDropdown === nav.id ? null : nav.id)
+                      setMobileDropdown(
+                        mobileDropdown === nav.id ? null : nav.id
+                      )
                     }
                     className="text-white"
                   >
