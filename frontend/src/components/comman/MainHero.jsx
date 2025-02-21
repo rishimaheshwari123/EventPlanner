@@ -67,7 +67,7 @@ const HeroSlider = ({ image, title, description, blur }) => {
                     </button>
                   </Link>
                   <a
-                    href="https://wa.me/6267144122"
+                    href="https://wa.me/message/ZLDXQLRJBPDUI1"
                     className="w-full sm:w-auto flex items-center justify-center bg-green-500 text-white px-6 py-3 rounded-lg text-lg hover:bg-green-600 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
                   >
                     <FaWhatsapp className="mr-2 text-xl" />

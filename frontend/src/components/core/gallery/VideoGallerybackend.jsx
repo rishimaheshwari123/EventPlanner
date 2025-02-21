@@ -1,11 +1,12 @@
 "use client";
 import { getAllGalleryAPI, getAllVideoAPI } from "@/services/operation/admin";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const BackendVideo = () => {
   const [gallery, setGallery] = useState([]);
   const [selectedType, setSelectedType] = useState(null);
   const [playingVideo, setPlayingVideo] = useState(null); // Track which video is playing
+  const videoRef = useRef(null); // Reference for the video element
 
   const getAllGallery = async () => {
     const response = await getAllVideoAPI();
@@ -27,6 +28,20 @@ const BackendVideo = () => {
   // Video click handler
   const handleVideoClick = (videoId) => {
     setPlayingVideo(videoId);
+    
+    setTimeout(() => {
+      if (videoRef.current) {
+        if (videoRef.current.requestFullscreen) {
+          videoRef.current.requestFullscreen();
+        } else if (videoRef.current.mozRequestFullScreen) {
+          videoRef.current.mozRequestFullScreen();
+        } else if (videoRef.current.webkitRequestFullscreen) {
+          videoRef.current.webkitRequestFullscreen();
+        } else if (videoRef.current.msRequestFullscreen) {
+          videoRef.current.msRequestFullscreen();
+        }
+      }
+    }, 200); // Thoda delay diya hai taaki video play ho sake
   };
 
   // Get unique types
@@ -41,7 +56,7 @@ const BackendVideo = () => {
       <br />
       <br />
 
-      <div className="max-w-7xl mx-auto p-6">
+      <div className="w-11/12 mx-auto p-6">
         {/* Type Buttons */}
         <div className="flex flex-wrap justify-center gap-4 mb-6">
           {uniqueTypes?.map((type) => (
@@ -68,6 +83,7 @@ const BackendVideo = () => {
                 {/* Show Thumbnail First */}
                 {playingVideo === item.public_id ? (
                   <video
+                    ref={videoRef} // Reference added
                     src={item?.url}
                     className="w-full h-full aspect-square object-cover rounded-lg transition-all duration-300 group-hover:scale-105"
                     controls
@@ -76,12 +92,10 @@ const BackendVideo = () => {
                 ) : (
                   <video
                     src={item.url} // Assuming API provides a thumbnail
-                    alt="Video Thumbnail"
                     className="w-full h-full aspect-square object-cover rounded-lg transition-all duration-300 group-hover:scale-105 cursor-pointer"
+                    autoPlay
                   />
                 )}
-
-           
               </div>
             ))
           )}

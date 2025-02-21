@@ -67,11 +67,11 @@ const Sidebar = () => {
       icon: <FaVideo />,
       label: "Add Video",
     },
-    {
-      href: "/admin/getAllGallery",
-      icon: <FcMultipleCameras />,
-      label: "Get All Gallery",
-    },
+    // {
+    //   href: "/admin/getAllGallery",
+    //   icon: <FcMultipleCameras />,
+    //   label: "Get All Gallery",
+    // },
     // {
     //   href: "/admin/product-create",
     //   icon: <PiStudentFill />,

@@ -32,7 +32,7 @@ function ReligiousEventPage() {
               description="Meticulous organization of religious rituals and customs."
             />
             <FeatureCard
-              icon={FaChurch}
+              icon={FaPrayingHands}
               title="Venue Selection"
               description="Find the perfect sacred space for your event."
             />
