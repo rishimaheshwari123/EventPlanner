@@ -21,10 +21,10 @@ const HeroSlider = ({ image, title, description, blur }) => {
   };
 
   const socialIcons = [
-    { Icon: FaFacebookF, href: "https://facebook.com", color: "bg-blue-600" },
-    { Icon: FaInstagram, href: "https://instagram.com", color: "bg-pink-600" },
-    { Icon: FaYoutube, href: "https://youtube.com", color: "bg-red-600" },
-    { Icon: FaWhatsapp, href: "https://wa.me/6267144122", color: "bg-green-500" },
+    { Icon: FaFacebookF, href: "https://www.facebook.com/share/1JzURcHccX/", color: "bg-blue-600" },
+    { Icon: FaInstagram, href: "https://www.instagram.com/_wedding_event_planner/?hl=en", color: "bg-pink-600" },
+    { Icon: FaYoutube, href: "https://youtube.com/@wedding-eventplanner?si=Ir-E6WG8kg3izWDB", color: "bg-red-600" },
+    { Icon: FaWhatsapp, href: "https://wa.me/message/ZLDXQLRJBPDUI1", color: "bg-green-500" },
   ];
 
   return (

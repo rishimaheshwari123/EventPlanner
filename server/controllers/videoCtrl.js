@@ -1,5 +1,7 @@
-const galleryModel = require("../models/gallery")
-const createGalleryCtrl = async (req, res) => {
+const galleryModel = require("../models/videoGallery")
+
+
+const createVideoCtrl = async (req, res) => {
     try {
         const { title, type, images } = req.body;
         const imageArray = typeof images === 'string' ? JSON.parse(images) : images;
@@ -12,19 +14,19 @@ const createGalleryCtrl = async (req, res) => {
         }
 
         const gallery = await galleryModel.create({
-            title, type, images: imageArray
+            title, type, videos: imageArray
         });
 
         return res.status(201).json({
             success: true,
-            message: "Gallery created successfully!",
+            message: "Video Gallery created successfully!",
             gallery
         });
     } catch (error) {
         console.log(error);
         return res.status(500).json({
             success: false,
-            message: "Error in creating gallery"
+            message: "Error in creating Video gallery"
         });
     }
 }
@@ -32,16 +34,16 @@ const createGalleryCtrl = async (req, res) => {
 
 
 
-const getAllGalleryCtrl = async (req, res) => {
+const getAllVideoCtrl = async (req, res) => {
     try {
         const gallerys = await galleryModel.find({});
-console.log(gallerys)
-
+        
         return res.status(200).json({
             totalGallery: gallerys.length,
             success: true,
             gallerys,
         })
+
     } catch (error) {
         console.log(error)
         return res.status(500).json({
@@ -50,6 +52,7 @@ console.log(gallerys)
         })
     }
 }
+
 const deleteGalleryCtrl = async (req, res) => {
     try {
         const { id } = req.params;
@@ -66,4 +69,4 @@ const deleteGalleryCtrl = async (req, res) => {
         })
     }
 }
-module.exports = { createGalleryCtrl, getAllGalleryCtrl, deleteGalleryCtrl }
+module.exports = { createVideoCtrl, getAllVideoCtrl, deleteGalleryCtrl }

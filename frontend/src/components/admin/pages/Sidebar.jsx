@@ -6,7 +6,7 @@ import { CiMenuFries } from "react-icons/ci";
 import { RxCross1 } from "react-icons/rx";
 import { AiOutlineUser } from "react-icons/ai";
 import { MdLogout } from "react-icons/md";
-import { FaHome } from "react-icons/fa";
+import { FaHome, FaVideo } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { setToken, setUser } from "@/redux/authSlice";
 import { FcBullish, FcMultipleCameras } from "react-icons/fc";
@@ -61,6 +61,11 @@ const Sidebar = () => {
       href: "/admin/create-gallery",
       icon: <FcMultipleCameras />,
       label: "Add Gallery",
+    },
+    {
+      href: "/admin/create-video",
+      icon: <FaVideo />,
+      label: "Add Video",
     },
     {
       href: "/admin/getAllGallery",

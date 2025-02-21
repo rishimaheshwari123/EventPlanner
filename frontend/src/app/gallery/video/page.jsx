@@ -11,6 +11,7 @@ import {
 } from "react-icons/fa";
 import image from "../../../assets/wedding.jpg";
 import VideoGallery from "@/components/core/gallery/VideoGallery";
+import BackendVideo from "@/components/core/gallery/VideoGallerybackend";
 
 function VideoGalleryPage() {
   return (
@@ -22,7 +23,7 @@ function VideoGalleryPage() {
         blur="none"
       />
 
-      <VideoGallery />
+      <BackendVideo />
     </div>
   );
 }
