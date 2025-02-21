@@ -45,7 +45,7 @@ const BackendVideo = () => {
   };
 
   // Get unique types
-  const uniqueTypes = [...new Set(gallery.map((currElem) => currElem.type))];
+  const uniqueTypes = [...new Set(gallery?.map((currElem) => currElem.type))];
 
   const filteredImages = selectedType
     ? gallery?.filter((currElem) => currElem.type === selectedType)

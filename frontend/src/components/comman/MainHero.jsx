@@ -12,7 +12,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaWhatsapp, FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 
-const HeroSlider = ({ image, title, description, blur }) => {
+const HeroSlider = ({ image, title, description, blur, }) => {
   const [textVisible, setTextVisible] = useState(true);
 
   const handleSlideChange = () => {

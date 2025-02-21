@@ -9,7 +9,7 @@ import {
   FaMusic,
   FaUserFriends,
 } from "react-icons/fa";
-import image from "../../../assets/wedding.jpg";
+import image from "../../../assets/logo.jpg";
 import VideoGallery from "@/components/core/gallery/VideoGallery";
 import BackendVideo from "@/components/core/gallery/VideoGallerybackend";
 
@@ -18,6 +18,7 @@ function VideoGalleryPage() {
     <div className="min-h-screen">
       <HeroSlider
         image={image}
+        VideoGallery={"yes"}
         description="Experience the magic of Bhopal's top wedding planners. Let us bring your dream wedding to life with personalized services, creativity, and attention to detail."
         title="Video Gallery"
         blur="none"
