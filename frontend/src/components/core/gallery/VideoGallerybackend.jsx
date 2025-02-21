@@ -28,7 +28,7 @@ const BackendVideo = () => {
   // Video click handler
   const handleVideoClick = (videoId) => {
     setPlayingVideo(videoId);
-    
+
     setTimeout(() => {
       if (videoRef.current) {
         if (videoRef.current.requestFullscreen) {
@@ -95,8 +95,8 @@ const BackendVideo = () => {
                     className="w-full h-full aspect-square object-cover rounded-lg transition-all duration-300 group-hover:scale-105 cursor-pointer"
                     autoPlay
                     loop
-                muted
-                playsInline
+                    muted
+                    playsInline
                   />
                 )}
               </div>
