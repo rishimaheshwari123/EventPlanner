@@ -9,7 +9,7 @@ import {
   FaMusic,
   FaUserFriends,
 } from "react-icons/fa";
-import image from "../../../assets/logo.jpg";
+import image from "../../../assets/happyb.jpg";
 import VideoGallery from "@/components/core/gallery/VideoGallery";
 import BackendVideo from "@/components/core/gallery/VideoGallerybackend";
 

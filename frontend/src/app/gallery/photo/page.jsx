@@ -10,7 +10,7 @@ import {
   FaMusic,
   FaUserFriends,
 } from "react-icons/fa";
-import image from "../../../assets/happyb.jpg";
+import image from "../../../assets/logo.jpg";
 import BackendGallery from "@/components/core/gallery/BackendGallery";
 
 function PhotoGallery() {
