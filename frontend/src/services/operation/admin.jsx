@@ -3,9 +3,11 @@ import { admin } from "../api";
 import Swal from "sweetalert2";
 const {
   CREATE_GALLERY,
+  CREATE_VIDEO,
 
   IMAGE_UPLOAD,
   GET_ALL_GALLERY,
+  GET_ALL_VIDEOS,
   DELETE_GALLERY,
 } = admin;
 
@@ -94,6 +96,45 @@ export const createGallery = async (data, token) => {
     }
   }
 };
+
+export const videoGalleryCreate = async (data, token) => {
+  let swalLoadingInstance;
+
+  Swal.fire({
+    title: "Loading...",
+    allowOutsideClick: false,
+    didOpen: () => {
+      swalLoadingInstance = Swal.showLoading();
+    },
+  });
+
+  try {
+    const response = await apiConnector("POST", CREATE_VIDEO, data);
+
+    console.log("CREATE gallery API RESPONSE............", response);
+
+    if (!response?.data?.success) {
+      throw new Error("Could Not Add Gallery Details");
+    }
+
+    Swal.fire({
+      icon: "success",
+      title: "Gallery Added Successfully",
+    });
+  } catch (error) {
+    console.log("CREATE Gallery API ERROR............", error);
+    Swal.fire({
+      icon: "error",
+      title: "Error",
+      text: error?.response?.data?.message,
+    });
+  } finally {
+    if (swalLoadingInstance) {
+      Swal.close();
+    }
+  }
+};
+
 export const getAllGalleryAPI = async () => {
   let result = [];
   try {
@@ -111,6 +152,26 @@ export const getAllGalleryAPI = async () => {
     return false;
   }
 };
+
+
+export const getAllVideoAPI = async () => {
+  let result = [];
+  try {
+    const response = await apiConnector("GET", GET_ALL_VIDEOS);
+
+    console.log("Gallery ............", response);
+
+    if (!response?.data?.success) {
+      throw new Error("Could Not Find Gallery");
+    }
+
+    result = response?.data?.gallerys;
+    return result;
+  } catch (error) {
+    return false;
+  }
+};
+
 
 export const deleteGalleryAPI = async (id) => {
   let swalLoadingInstance;

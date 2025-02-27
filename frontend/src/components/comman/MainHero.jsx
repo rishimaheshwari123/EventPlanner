@@ -12,7 +12,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaWhatsapp, FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 
-const HeroSlider = ({ image, title, description, blur }) => {
+const HeroSlider = ({ image, title, description, blur, }) => {
   const [textVisible, setTextVisible] = useState(true);
 
   const handleSlideChange = () => {
@@ -21,10 +21,10 @@ const HeroSlider = ({ image, title, description, blur }) => {
   };
 
   const socialIcons = [
-    { Icon: FaFacebookF, href: "https://facebook.com", color: "bg-blue-600" },
-    { Icon: FaInstagram, href: "https://instagram.com", color: "bg-pink-600" },
-    { Icon: FaYoutube, href: "https://youtube.com", color: "bg-red-600" },
-    { Icon: FaWhatsapp, href: "https://wa.me/6267144122", color: "bg-green-500" },
+    { Icon: FaFacebookF, href: "https://www.facebook.com/share/1JzURcHccX/", color: "bg-blue-600" },
+    { Icon: FaInstagram, href: "https://www.instagram.com/_wedding_event_planner/?hl=en", color: "bg-pink-600" },
+    { Icon: FaYoutube, href: "https://youtube.com/@wedding-eventplanner?si=Ir-E6WG8kg3izWDB", color: "bg-red-600" },
+    { Icon: FaWhatsapp, href: "https://wa.me/message/ZLDXQLRJBPDUI1", color: "bg-green-500" },
   ];
 
   return (
@@ -67,7 +67,7 @@ const HeroSlider = ({ image, title, description, blur }) => {
                     </button>
                   </Link>
                   <a
-                    href="https://wa.me/6267144122"
+                    href="https://wa.me/message/ZLDXQLRJBPDUI1"
                     className="w-full sm:w-auto flex items-center justify-center bg-green-500 text-white px-6 py-3 rounded-lg text-lg hover:bg-green-600 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
                   >
                     <FaWhatsapp className="mr-2 text-xl" />

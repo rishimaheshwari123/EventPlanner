@@ -4,7 +4,7 @@
 import HeroSlider from "@/components/comman/MainHero"
 import Image from "next/image"
 import { FaPrayingHands, FaChurch, FaBook, FaUtensils, FaMusic, FaCamera } from "react-icons/fa"
-import image from '../../../assets/ram.jpg' // Replace with actual image
+import image from './bg.jpg' // Replace with actual image
 
 function ReligiousEventPage() {
   return (
@@ -32,7 +32,7 @@ function ReligiousEventPage() {
               description="Meticulous organization of religious rituals and customs."
             />
             <FeatureCard
-              icon={FaChurch}
+              icon={FaPrayingHands}
               title="Venue Selection"
               description="Find the perfect sacred space for your event."
             />

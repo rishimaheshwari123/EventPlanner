@@ -22,6 +22,7 @@ export const navlink = [
             { id: 35, name: "Bridal & Baby Showers", link: "/services/bridalbaby" },
             { id: 36, name: "Concerts & Music Festivals", link: "/services/corpateandmusic" },
             { id: 37, name: "Religious Events", link: "/services/Religious" },
+            { id: 38, name: "Celebrity Events", link: "/services/celebrity" },
 
         ],
     },
